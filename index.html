@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data Fetcher</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+<body>
+    <div class="bg-animation" id="bgAnimation"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-user"></i> User Data Fetcher</h1>
+            <p>Fetching user data from JSONPlaceholder API with style</p>
+        </div>
+
+        <div class="controls">
+            <button class="btn" id="fetchBtn">
+                <i class="fas fa-download"></i> Fetch Users
+            </button>
+            <button class="btn" id="reloadBtn" style="display: none;">
+                <i class="fas fa-sync-alt"></i> Reload Data
+            </button>
+        </div>
+
+        <div class="loader" id="loader">
+            <div class="spinner"></div>
+        </div>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <div class="stat-item">
+                <span class="stat-number" id="userCount">0</span>
+                <span class="stat-label">Users Loaded</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="loadTime">0</span>
+                <span class="stat-label">Load Time (ms)</span>
+            </div>
+        </div>
+
+        <div class="users-grid" id="usersContainer"></div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
